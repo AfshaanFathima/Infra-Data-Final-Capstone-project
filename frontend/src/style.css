@@ -1,0 +1,111 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #203247;
+  background: #f4f7fb;
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #f4f7fb; color: #203247; font-size: 14px; }
+button, input, select, textarea { font: inherit; }
+.app-shell { min-height: 100vh; }
+.sidebar {
+  position: fixed; inset: 0 auto 0 0; width: 252px; background: #102a43; color: #d8e4ef;
+  display: flex; flex-direction: column; padding: 25px 16px 16px; z-index: 30;
+}
+.brand { display: flex; align-items: center; gap: 11px; padding: 0 10px 27px; color: #fff; }
+.brand-mark { width: 39px; height: 39px; display: grid; place-items: center; border-radius: 12px; background: #19a7a0; color: white; font-size: 19px; }
+.brand strong { display: block; font-size: 18px; letter-spacing: -.4px; }
+.brand small { display: block; margin-top: 2px; color: #8fa9bf; font-size: 9px; letter-spacing: 1.5px; }
+.workspace-label { margin: 0 10px 19px; color: #7892a9; font-size: 10px; letter-spacing: 1.5px; font-weight: 700; }
+.nav-group { margin-bottom: 22px; }
+.nav-caption { padding: 0 11px 9px; color: #7892a9; font-size: 10px; font-weight: 700; letter-spacing: 1.4px; }
+.side-link { display: flex; align-items: center; gap: 13px; padding: 11px 12px; margin: 3px 0; border-radius: 8px; color: #b9cad9; text-decoration: none; font-weight: 500; transition: .15s ease; }
+.side-link i { width: 18px; font-size: 16px; }
+.side-link:hover { color: white; background: #1b3b56; }
+.side-link.active { color: white; background: #1b5266; box-shadow: inset 3px 0 #36c2b5; }
+.sidebar-bottom { margin-top: auto; border-top: 1px solid #29445c; padding: 17px 8px 2px; color: #8fa9bf; font-size: 10px; display: flex; align-items: center; gap: 8px; }
+.online-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #36c58c; flex: 0 0 auto; }
+.main-area { margin-left: 252px; min-height: 100vh; display: flex; flex-direction: column; }
+.topbar { height: 68px; background: #fff; border-bottom: 1px solid #e8edf3; display: flex; align-items: center; justify-content: space-between; padding: 0 34px; }
+.topbar-title { color: #718096; font-size: 12px; }
+.topbar-right { display: flex; align-items: center; gap: 19px; }
+.connection { color: #687d91; font-size: 11px; display: flex; align-items: center; gap: 7px; }
+.user-avatar { width: 34px; height: 34px; display: grid; place-items: center; background: #e7f3f2; color: #168780; font-weight: 700; border-radius: 50%; font-size: 11px; }
+.content-area { width: 100%; max-width: 1600px; margin: 0 auto; padding: 34px; flex: 1; }
+.app-footer { padding: 15px 34px; border-top: 1px solid #e8edf3; color: #8a99a8; font-size: 10px; }
+.app-footer span { padding: 0 5px; }
+.page-heading h1 { font-size: 27px; letter-spacing: -.8px; font-weight: 750; color: #142d43; margin: 4px 0 5px; }
+.page-heading p { font-size: 13px; }
+.eyebrow, .section-kicker { color: #159b96; font-size: 10px; font-weight: 800; letter-spacing: 1.5px; }
+.section-kicker { margin-bottom: 12px; }
+.panel { background: #fff; border: 1px solid #e8edf3; border-radius: 12px; padding: 20px; margin-bottom: 18px; box-shadow: 0 3px 12px rgba(26, 50, 75, .025); }
+.panel-heading { padding-bottom: 16px; margin-bottom: 12px; border-bottom: 1px solid #f0f3f7; }
+.panel-heading h5 { color: #20364b; font-size: 15px; font-weight: 700; }
+.stat-card { height: 100%; min-height: 135px; background: #fff; border: 1px solid #e8edf3; border-radius: 11px; padding: 17px; position: relative; box-shadow: 0 3px 12px rgba(26, 50, 75, .025); }
+.stat-icon { width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; font-size: 16px; margin-bottom: 13px; }
+.stat-icon.blue { background: #e8f1ff; color: #3978d5; }
+.stat-icon.purple { background: #f0ebff; color: #8263d2; }
+.stat-icon.teal { background: #e3f7f5; color: #159b96; }
+.stat-icon.green { background: #e4f7ed; color: #229d68; }
+.stat-icon.orange { background: #fff2df; color: #d58b24; }
+.stat-icon.red { background: #ffebeb; color: #d65c5c; }
+.stat-label { color: #77889a; font-size: 11px; font-weight: 600; }
+.stat-value { color: #1a344b; font-size: 25px; font-weight: 750; line-height: 1.35; margin-top: 2px; }
+.stat-hint { color: #93a0ad; font-size: 10px; margin-top: 3px; }
+.metric-line { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #f0f3f7; color: #687c8e; font-size: 12px; }
+.metric-line:last-child { border-bottom: 0; }
+.metric-line strong { color: #20364b; font-size: 15px; }
+.data-table { font-size: 12px; }
+.data-table thead th { background: #f7f9fc; color: #718398; text-transform: uppercase; letter-spacing: .5px; font-size: 9px; font-weight: 800; white-space: nowrap; padding: 12px 11px; border-bottom: 1px solid #e8edf3; }
+.data-table tbody td { color: #40566a; padding: 12px 11px; border-color: #f0f3f7; vertical-align: middle; }
+.data-table tbody tr:hover { background: #fbfcfe; }
+.empty-cell { text-align: center; color: #8b9aaa !important; padding: 35px 10px !important; }
+.status-pill { display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 20px; font-size: 9px; font-weight: 800; letter-spacing: .3px; white-space: nowrap; }
+.status-pill.success { color: #16804d; background: #e5f6ed; }
+.status-pill.warning { color: #a86b12; background: #fff3dc; }
+.status-pill.danger { color: #bd4141; background: #ffebeb; }
+.status-pill.secondary { color: #64748b; background: #edf1f5; }
+.form-panel { border-color: #d9e9ef; background: #fcfefe; }
+.form-label { color: #52677b; font-size: 11px; font-weight: 700; margin-bottom: 6px; }
+.form-control, .form-select { border-color: #dfe7ee; border-radius: 7px; min-height: 39px; color: #263d52; font-size: 12px; box-shadow: none !important; }
+.form-control:focus, .form-select:focus { border-color: #31aaa3; }
+.btn { border-radius: 7px; font-size: 12px; font-weight: 650; padding: 9px 13px; }
+.btn-sm { padding: 6px 9px; font-size: 11px; }
+.btn-primary { background: #168f8b; border-color: #168f8b; }
+.btn-primary:hover, .btn-primary:focus { background: #117b77; border-color: #117b77; }
+.btn-success { background: #219968; border-color: #219968; }
+.filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
+.filter-select { max-width: 330px; }
+.loading-state { padding: 24px 10px; display: flex; align-items: center; justify-content: center; gap: 10px; color: #78899a; font-size: 12px; }
+.tabs-strip { display: flex; gap: 7px; flex-wrap: wrap; border-bottom: 1px solid #e3eaf0; }
+.report-tab { border: 0; background: transparent; padding: 10px 15px; color: #718398; font-size: 12px; font-weight: 700; border-bottom: 2px solid transparent; }
+.report-tab.active { color: #168f8b; border-color: #168f8b; }
+.analytics-metric { border: 1px solid #e8edf3; border-radius: 9px; padding: 14px; height: 100%; background: #fbfcfe; }
+.analytics-metric div { color: #718398; font-size: 10px; font-weight: 650; margin-bottom: 7px; }
+.analytics-metric strong { color: #20364b; font-size: 21px; }
+.nested-report { padding: 15px; background: #fbfcfe; border: 1px solid #e8edf3; border-radius: 8px; }
+.nested-report h6 { color: #2c4358; font-size: 12px; font-weight: 750; margin-bottom: 12px; }
+.nested-report pre { white-space: pre-wrap; overflow-wrap: anywhere; color: #51677c; font-size: 11px; margin: 0; }
+.not-found { text-align: center; padding: 90px 20px; }
+.mobile-menu { display: none; }
+.mobile-shade { display: none; }
+@media (max-width: 1000px) {
+  .sidebar { width: 225px; }
+  .main-area { margin-left: 225px; }
+  .content-area { padding: 25px; }
+  .topbar { padding: 0 25px; }
+}
+@media (max-width: 760px) {
+  .sidebar { transform: translateX(-100%); transition: transform .2s ease; width: 260px; }
+  .sidebar.sidebar-open { transform: translateX(0); }
+  .mobile-shade { display: block; position: fixed; inset: 0; background: rgba(9, 25, 39, .38); z-index: 20; }
+  .main-area { margin-left: 0; }
+  .mobile-menu { display: inline-block; }
+  .topbar { height: 60px; padding: 0 16px; gap: 10px; }
+  .topbar-title { margin-right: auto; font-size: 10px; }
+  .connection { display: none; }
+  .content-area { padding: 22px 15px; }
+  .app-footer { padding: 14px 15px; }
+  .page-heading h1 { font-size: 23px; }
+  .panel { padding: 15px; }
+}

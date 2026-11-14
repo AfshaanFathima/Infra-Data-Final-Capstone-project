@@ -1,0 +1,40 @@
+﻿# Environment variables and secrets
+.env
+.env.*
+!.env.example
+application.properties
+application-*.properties
+application-*.yml
+application-*.yaml
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Backend build output
+pharmexp/target/
+pharmexp/build/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.venv/
+.venv*/
+venv/
+
+# Local datasets and generated reports
+data/raw/
+data/cleaned/
+data/reports/
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+application.yml
+application.yaml
