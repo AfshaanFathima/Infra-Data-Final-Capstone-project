@@ -38,3 +38,4 @@ Thumbs.db
 
 application.yml
 application.yaml
+!pharmexp/src/main/resources/application.properties
