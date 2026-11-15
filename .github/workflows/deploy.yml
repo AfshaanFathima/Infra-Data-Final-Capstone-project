@@ -1,0 +1,27 @@
+
+name: PharmaTrack EC2 Deployment
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to AWS EC2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy application on EC2
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd ~/Infra-Data-Final-Capstone-project
+            git pull --ff-only origin main
+            docker compose build backend frontend
+            docker compose up -d --remove-orphans
+            docker compose ps
